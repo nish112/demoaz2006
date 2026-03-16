@@ -19,11 +19,11 @@ jobs:
 
     steps:
       # Step showing Custom Variables with Step-level override
-      - name: "Say Hello Mona it's Monday"
-        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+      - name: "Say Hello Mona it's Monday"        
         env:
           # 3. CUSTOM VARIABLE: Step level (available only to this step)
           First_Name: Mona
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
 
       # Step showing Default Environment Variables provided by GitHub
       - name: Display Default Environment Variables

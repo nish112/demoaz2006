@@ -1,6 +1,7 @@
 on: 
+
   workflow_dispatch:
-  
+
 jobs:
   # JOB 1: Base setup (Sequential Start)
   check-bats-version:
@@ -26,15 +27,14 @@ jobs:
     steps:
       - name: "Running Parallel Check"
         run: echo "This job runs at the same time as check-bats-version"
-
-  # JOB 3: Runs SEQUENTIALLY (only after Job 1 and Job 2 finish)
+# JOB 3: Runs SEQUENTIALLY (only after Job 1 and Job 2 finish)
   final-report:
     runs-on: ubuntu-latest
     needs: [check-bats-version, parallel-analysis]
     steps:
       - name: "Final Summary"
         run: echo "This job waited for both previous jobs to complete successfully."
-    needs: [check-bats-version, parallel-analysis]
+  
     steps:
       - name: "Final Summary"
         run: echo "This job waited for both previous jobs to complete successfully."

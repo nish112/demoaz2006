@@ -34,7 +34,4 @@ jobs:
     steps:
       - name: "Final Summary"
         run: echo "This job waited for both previous jobs to complete successfully."
-  
-    steps:
-      - name: "Final Summary"
-        run: echo "This job waited for both previous jobs to complete successfully."
+  obs to complete successfully."
